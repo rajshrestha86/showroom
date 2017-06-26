@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title> Employee Detail </title>
+</head>
+<body>
+	<center> <h1> Employee Details </h1> </center>
+	
+	{% if employee %}
+		<ul>
+		<li> Employee Id: {{employee.Emp_Id}} </li>
+		<li> Department Id: {{employee.Dep_Id}} </li>
+		<li> Name: {{employee.Name}} </li>
+		<li> Qualification: {{employee.Qualification}} </li>
+		<li> Gender: {{employee.Gender}} </li>
+		<li> Salary: {{employee.Salary}} </li>
+		<li> Email: {%if employee.Email%}{{employee.Email}}{%endif%} </li>
+	{%else%}
+		<p> The employee you are looking for does not exist. 
+	{%endif%}
+	
+</body>
+</html>

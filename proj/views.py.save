@@ -1,0 +1,15 @@
+from django.http import HttpResponse
+from django.shortcuts  import render
+from database import models
+
+def home_view(request):
+	value=request.META['HTTP_REFERER']
+	return HttpResponse(value);
+	#return  render(request,request.META['REMOTE_ADDR']);
+
+
+
+
+def search_view(request):
+	key=request.GET['q']
+	return (key);
